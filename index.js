@@ -8,7 +8,7 @@ app.use(cors())
 
 const PORT = process.env.PORT || 4000;
 
-app.get('/products', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
       // Fetch product details from Firestore
       const querySnapshot = await User.getDocs(User.productsCollection);
